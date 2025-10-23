@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Encode_Sans_Expanded,
+  Encode_Sans_Semi_Condensed,
+} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const encodeSansExpanded = Encode_Sans_Expanded({
+  weight: ["400"],
+  variable: "--font-encode-sans-expanded",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const encodeSansSemiCondensed = Encode_Sans_Semi_Condensed({
+  weight: ["400"],
+  variable: "--font-encode-sans-semi-condensed",
   subsets: ["latin"],
 });
 
@@ -25,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${encodeSansExpanded.variable} ${encodeSansSemiCondensed.variable} antialiased`}
       >
         {children}
       </body>
