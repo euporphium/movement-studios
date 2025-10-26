@@ -3,6 +3,7 @@ import {
   Encode_Sans_Expanded,
   Encode_Sans_Semi_Condensed,
 } from "next/font/google";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const encodeSansExpanded = Encode_Sans_Expanded({
@@ -12,7 +13,7 @@ const encodeSansExpanded = Encode_Sans_Expanded({
 });
 
 const encodeSansSemiCondensed = Encode_Sans_Semi_Condensed({
-  weight: ["400"],
+  weight: ["400", "600"],
   variable: "--font-encode-sans-semi-condensed",
   subsets: ["latin"],
 });
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${encodeSansExpanded.variable} ${encodeSansSemiCondensed.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
