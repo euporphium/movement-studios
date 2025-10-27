@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import {
+  DM_Sans,
   Encode_Sans_Expanded,
   Encode_Sans_Semi_Condensed,
 } from "next/font/google";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+});
 
 const encodeSansExpanded = Encode_Sans_Expanded({
   weight: ["400"],
@@ -31,10 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${encodeSansExpanded.variable} ${encodeSansSemiCondensed.variable} antialiased`}
+        className={`${dmSans.variable} ${encodeSansExpanded.variable} ${encodeSansSemiCondensed.variable} antialiased`}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

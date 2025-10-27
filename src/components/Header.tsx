@@ -24,7 +24,9 @@ export default function Header() {
         </a>
       </nav>
       <MobileMenu className="flex md:hidden" />
-      <span className="text-p2 px-[1.875rem] ml-auto">Movement Studios.</span>
+      <a href="/" className="text-p2 px-[1.875rem] ml-auto">
+        Movement Studios.
+      </a>
     </header>
   );
 }
