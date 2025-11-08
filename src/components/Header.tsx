@@ -1,32 +1,56 @@
-import MobileMenu from "@/components/MobileMenu";
+import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/util/cn";
 
-export default function Header() {
+export interface HeaderProps {
+  heading: string;
+  src: string;
+  alt: string;
+  h1ClassName: string;
+  cta?: {
+    text: string;
+    href: string;
+  };
+}
+
+export default function Header({
+  heading,
+  src,
+  alt,
+  h1ClassName,
+  cta,
+}: HeaderProps) {
+  const headingPosition = cta
+    ? "bottom-[142px] md:bottom-auto md:top-[116px]"
+    : "top-[116px]";
+
   return (
-    <header className="z-20 flex items-center bg-neutral-dark text-neutral-light h-[50px] md:h-[76px] border-b border-neutral-mid">
-      <nav className="hidden md:flex h-full items-center divide-x divide-neutral-mid border-r border-neutral-mid">
-        <a
-          href="/classes"
-          className="flex h-full items-center text-link px-[1.875rem] hover:bg-brand-main"
+    <header className="relative h-[640px] lg:h-auto lg:aspect-1280/650">
+      <h1
+        className={cn(
+          "absolute text-neutral-light z-10 left-[30px] max-w-[350px] md:max-w-[550px] lg:max-w-[600px]",
+          headingPosition,
+          h1ClassName,
+        )}
+      >
+        {heading}
+      </h1>
+      {cta && (
+        <Link
+          href={cta.href}
+          className="absolute bottom-16 bg-brand-soft hover:bg-brand-hot hover:text-neutral-light typo-btn py-[18px] px-[26px] left-[30px]"
         >
-          Classes
-        </a>
-        <a
-          href="/about"
-          className="flex h-full items-center text-link px-[1.875rem] hover:bg-brand-main"
-        >
-          About
-        </a>
-        <a
-          href="/"
-          className="flex h-full items-center text-link px-[1.875rem] hover:opacity-60"
-        >
-          224 Nostrand Ave, Brooklyn, NY
-        </a>
-      </nav>
-      <MobileMenu className="flex md:hidden" />
-      <a href="/" className="text-p2 px-[1.875rem] ml-auto">
-        Movement Studios.
-      </a>
+          {cta.text}
+        </Link>
+      )}
+      <Image
+        className="object-cover object-[50%_50%] absolute inset-0 w-full h-full -z-10"
+        src={src}
+        alt={alt}
+        fill
+        sizes="100vw"
+        preload
+      />
     </header>
   );
 }

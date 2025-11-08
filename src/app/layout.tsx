@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import {
   DM_Sans,
+  Encode_Sans_Condensed,
   Encode_Sans_Expanded,
   Encode_Sans_Semi_Condensed,
 } from "next/font/google";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -16,6 +17,12 @@ const dmSans = DM_Sans({
 const encodeSansExpanded = Encode_Sans_Expanded({
   weight: ["400"],
   variable: "--font-encode-sans-expanded",
+  subsets: ["latin"],
+});
+
+const encodeSansCondensed = Encode_Sans_Condensed({
+  weight: ["600"],
+  variable: "--font-encode-sans-condensed",
   subsets: ["latin"],
 });
 
@@ -32,15 +39,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${encodeSansExpanded.variable} ${encodeSansSemiCondensed.variable} antialiased`}
+        className={`${dmSans.variable} ${encodeSansExpanded.variable} ${encodeSansCondensed.variable} ${encodeSansSemiCondensed.variable} antialiased`}
       >
-        <Header />
+        <Navigation />
         {children}
         <Footer />
       </body>
