@@ -171,3 +171,31 @@ body {
   font-family:
     var(--font-encode-sans-semi-condensed), Arial, Helvetica, sans-serif;
 }
+
+/* Marquee Component Styles */
+.marquee {
+  animation: marquee-scroll var(--marquee-duration, 25s) linear infinite;
+}
+
+.marquee-container:hover .marquee {
+  animation-play-state: var(--marquee-pause-hover, paused);
+}
+
+.marquee-container:active .marquee {
+  animation-play-state: var(--marquee-pause-click, paused);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
