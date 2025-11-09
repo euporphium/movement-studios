@@ -1,3 +1,4 @@
+import FoundersSection from "@/app/FoundersSection";
 import SplitSection from "@/app/SplitSection";
 import Header from "@/components/Header";
 import Marquee from "@/components/Marquee";
@@ -35,6 +36,7 @@ export default function Home() {
         buttonLabel="Reserve your spot"
         buttonHref="/classes"
       />
+      <FoundersSection />
     </main>
   );
 }
