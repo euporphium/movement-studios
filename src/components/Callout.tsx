@@ -1,12 +1,12 @@
 import LinkButton from "@/components/LinkButton";
 
-export interface CalloutSection {
+export interface CalloutProps {
   showLink?: boolean;
 }
 
-export default function CalloutSection({ showLink = false }: CalloutSection) {
+export default function Callout({ showLink = false }: CalloutProps) {
   return (
-    <section className="bg-brand-main py-[110px] lg:py-[149px]">
+    <article className="bg-brand-main py-[110px] lg:py-[149px]">
       <div className="flex flex-col gap-[30px] max-w-7xl mx-auto px-11 md:px-[60px]">
         <p className="typo-h3 text-neutral-light">
           Whether you're a beginner looking to explore expressive movement or an
@@ -22,6 +22,6 @@ export default function CalloutSection({ showLink = false }: CalloutSection) {
           </LinkButton>
         )}
       </div>
-    </section>
+    </article>
   );
 }
