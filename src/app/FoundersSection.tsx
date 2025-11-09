@@ -28,7 +28,6 @@ export default function FoundersSection() {
           imageSrc="/home/alisa.png"
           imageAlt="Black and white portrait of a dance instructor against a light background."
           bgColor="bg-brand-soft"
-          textColor="text-neutral-dark"
           imageClassName="h-[220px] lg:h-[307px]"
         />
       </div>

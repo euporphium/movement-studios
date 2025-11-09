@@ -3,7 +3,7 @@
 import { cn } from "@/util/cn";
 
 interface MarqueeProps {
-  messages: string[];
+  messages: readonly string[];
   duration?: number;
   pauseOnHover?: boolean;
   pauseOnClick?: boolean;
@@ -11,7 +11,7 @@ interface MarqueeProps {
 }
 
 interface MarqueeTrackProps {
-  messages: string[];
+  messages: readonly string[];
   ariaHidden?: boolean;
 }
 

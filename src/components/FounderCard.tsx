@@ -6,7 +6,6 @@ export interface FounderCardProps {
   imageSrc: string;
   imageAlt: string;
   bgColor: string;
-  textColor?: string;
   imageClassName?: string;
 }
 
@@ -16,7 +15,6 @@ export default function FounderCard({
   imageSrc,
   imageAlt,
   bgColor,
-  textColor = "",
   imageClassName = "",
 }: FounderCardProps) {
   return (
@@ -29,8 +27,8 @@ export default function FounderCard({
         height={307}
       />
       <div className={`flex flex-col gap-2 p-5 ${bgColor}`}>
-        <p className={`typo-h4 ${textColor}`}>{name}</p>
-        <p className={`typo-p4 ${textColor}`}>{title}</p>
+        <p className="typo-h4">{name}</p>
+        <p className="typo-p4">{title}</p>
       </div>
     </article>
   );

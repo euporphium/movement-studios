@@ -1,5 +1,6 @@
 import { ClassCard } from "@/app/classes/ClassCard";
-import { CLASS_DATA } from "@/constants/classes";
+import { FeaturedClassCard } from "@/app/classes/FeaturedClassCard";
+import { CLASS_DATA, FEATURED_CLASS_DATA } from "@/constants/classes";
 
 export default function BookingSection() {
   return (
@@ -13,6 +14,7 @@ export default function BookingSection() {
         {CLASS_DATA.map((classData) => (
           <ClassCard key={classData.code} {...classData} />
         ))}
+        <FeaturedClassCard {...FEATURED_CLASS_DATA} />
       </div>
     </section>
   );
