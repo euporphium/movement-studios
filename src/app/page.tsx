@@ -1,5 +1,6 @@
 import FoundersSection from "@/app/FoundersSection";
 import SplitSection from "@/app/SplitSection";
+import CalloutSection from "@/components/CalloutSection";
 import Header from "@/components/Header";
 import Marquee from "@/components/Marquee";
 import { MARQUEE_MESSAGES } from "@/constants/marquee";
@@ -37,6 +38,7 @@ export default function Home() {
         buttonHref="/classes"
       />
       <FoundersSection />
+      <CalloutSection showLink />
     </main>
   );
 }

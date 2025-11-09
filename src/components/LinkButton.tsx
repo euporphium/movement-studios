@@ -15,7 +15,7 @@ export default function LinkButton({
   return (
     <Link
       href={href}
-      className={cn(" typo-btn py-[18px] px-[26px]", className)}
+      className={cn("inline-block typo-btn py-[18px] px-[26px]", className)}
     >
       {children}
     </Link>

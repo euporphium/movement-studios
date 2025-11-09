@@ -21,7 +21,7 @@ export default function SplitSection({
   buttonHref,
 }: SplitSectionProps) {
   return (
-    <section className="grid md:grid-cols-2">
+    <section className="grid md:grid-cols-2 border-b border-neutral-mid">
       <div className="relative aspect-square">
         <Image
           className="object-cover"
