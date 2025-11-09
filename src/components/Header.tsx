@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import LinkButton from "@/components/LinkButton";
 import { cn } from "@/util/cn";
 
 export interface HeaderProps {
@@ -36,12 +36,12 @@ export default function Header({
         {heading}
       </h1>
       {cta && (
-        <Link
+        <LinkButton
           href={cta.href}
-          className="absolute bottom-16 bg-brand-soft hover:bg-brand-hot hover:text-neutral-light typo-btn py-[18px] px-[26px] left-[30px]"
+          className="absolute bottom-16 left-[30px] bg-brand-soft hover:bg-brand-hot hover:text-neutral-light"
         >
           {cta.text}
-        </Link>
+        </LinkButton>
       )}
       <Image
         className="object-cover object-[50%_50%] absolute inset-0 w-full h-full -z-10"
