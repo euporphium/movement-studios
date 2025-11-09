@@ -14,22 +14,26 @@ export default function FoundersSection() {
 
       {/* Right column - Founder images */}
       <div className="grid grid-rows-2">
-        <FounderCard
-          name="Sophia Bennett"
-          title="Founder & Instructor"
-          imageSrc="/home/sophia.png"
-          imageAlt="Black and white portrait of a dance instructor posing in front of a dark background."
-          bgColor="bg-brand-hot"
-          imageClassName="h-[220px] lg:h-[307px]"
-        />
-        <FounderCard
-          name="Alisa Morris"
-          title="Founder & Program Manager"
-          imageSrc="/home/alisa.png"
-          imageAlt="Black and white portrait of a dance instructor against a light background."
-          bgColor="bg-brand-soft"
-          imageClassName="h-[220px] lg:h-[307px]"
-        />
+        <div className="aspect-[640/307]">
+          <FounderCard
+            name="Sophia Bennett"
+            title="Founder & Instructor"
+            imageSrc="/home/sophia.png"
+            imageAlt="Black and white portrait of a dance instructor posing in front of a dark background."
+            imageSizes="(max-width: 800px) 100vw, 50vw"
+            bgColor="bg-brand-hot"
+          />
+        </div>
+        <div className="aspect-[640/307]">
+          <FounderCard
+            name="Alisa Morris"
+            title="Founder & Program Manager"
+            imageSrc="/home/alisa.png"
+            imageAlt="Black and white portrait of a dance instructor against a light background."
+            imageSizes="(max-width: 800px) 100vw, 50vw"
+            bgColor="bg-brand-soft"
+          />
+        </div>
       </div>
     </section>
   );

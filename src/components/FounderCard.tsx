@@ -6,7 +6,7 @@ export interface FounderCardProps {
   imageSrc: string;
   imageAlt: string;
   bgColor: string;
-  imageClassName?: string;
+  imageSizes: string;
 }
 
 export default function FounderCard({
@@ -15,17 +15,17 @@ export default function FounderCard({
   imageSrc,
   imageAlt,
   bgColor,
-  imageClassName = "",
+  imageSizes,
 }: FounderCardProps) {
   return (
-    <article>
-      <div className="relative aspect-[640/307]">
+    <article className="h-full flex flex-col">
+      <div className="relative flex-1">
         <Image
-          className={`w-full object-cover ${imageClassName}`}
+          className="object-cover"
           src={imageSrc}
           alt={imageAlt}
           fill
-          sizes="(max-width: 800px) 100vw, 50vw"
+          sizes={imageSizes}
         />
       </div>
       <div className={`flex flex-col gap-2 p-5 ${bgColor}`}>
