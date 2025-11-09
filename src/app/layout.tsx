@@ -12,24 +12,28 @@ import "./globals.css";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const encodeSansExpanded = Encode_Sans_Expanded({
   weight: ["400"],
   variable: "--font-encode-sans-expanded",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const encodeSansCondensed = Encode_Sans_Condensed({
   weight: ["600"],
   variable: "--font-encode-sans-condensed",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const encodeSansSemiCondensed = Encode_Sans_Semi_Condensed({
   weight: ["400", "600"],
   variable: "--font-encode-sans-semi-condensed",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
