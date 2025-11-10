@@ -34,7 +34,7 @@ export function ClassCard({
         <h3 className="typo-h4">{name}</h3>
         <p className="typo-p5">{description}</p>
       </div>
-      <div className="flex items-stretch justify-between border-t border-neutral-mid typo-p5">
+      <div className="flex items-stretch justify-between border-t border-neutral-mid typo-p5 z-10">
         <span className="text-brand-deep flex items-center pl-5 py-4">
           {schedule}
         </span>
