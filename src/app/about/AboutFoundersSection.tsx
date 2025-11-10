@@ -3,11 +3,11 @@ import FounderCard from "@/components/FounderCard";
 export default function AboutFoundersSection() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-3 border-t border-neutral-mid">
-      <div className="bg-neutral-dark p-[30px] pb-16">
+      <div className="bg-neutral-dark p-[30px] pb-16 lg:border-r border-neutral-mid">
         <h2 className="text-neutral-light typo-h3">Founders</h2>
       </div>
       <div className="grid md:grid-cols-2 md:col-span-2">
-        <div className="aspect-square">
+        <div className="aspect-square md:border-r border-neutral-mid">
           <FounderCard
             name="Sophia Bennett"
             title="Founder & Instructor"
