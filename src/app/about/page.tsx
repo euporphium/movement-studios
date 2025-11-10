@@ -1,4 +1,5 @@
 import InstructorsSection from "@/app/about/InstructorsSection";
+import SpaceSection from "@/app/about/SpaceSection";
 import Callout from "@/components/Callout";
 import Header from "@/components/Header";
 import Marquee from "@/components/Marquee";
@@ -17,6 +18,7 @@ export default function About() {
       <Marquee messages={MARQUEE_MESSAGES} />
       <AboutFoundersSection />
       <InstructorsSection />
+      <SpaceSection />
       <Callout showLink />
     </main>
   );
