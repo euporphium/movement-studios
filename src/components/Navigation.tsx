@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { cn } from "@/util/cn";
 
 const NAV_LINKS = [
@@ -12,6 +13,12 @@ const NAV_LINKS = [
 
 export default function Navigation() {
   const [navOpen, setNavOpen] = useState(false);
+  const pathname = usePathname();
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Runs when pathname changes while layout persists
+  useEffect(() => {
+    setNavOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-20 flex items-center bg-neutral-dark text-neutral-light h-[50px] md:h-[76px] border-b border-neutral-mid">
